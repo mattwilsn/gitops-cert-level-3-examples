@@ -22,7 +22,7 @@ spec:
       sources:
         - repoURL: https://kostis-codefresh.github.io/multi-sources-example
           chart: my-chart
-          targetRevision: "{{.chart}}"
+          targetRevision: "0.1.0"
           helm:
             valueFiles:
               - $values/helm-multi-source/my-values/common-values.yaml
