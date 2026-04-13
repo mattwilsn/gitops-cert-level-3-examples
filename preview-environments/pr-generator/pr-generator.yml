@@ -13,6 +13,8 @@ spec:
           repo: gitops-cert-level-3-examples
           labels:
             - preview-ready
+        filters:
+          - labelMatch: "preview-ready"
         requeueAfterSeconds: 180
   template:
     metadata:
