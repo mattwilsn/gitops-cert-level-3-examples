@@ -22,7 +22,7 @@ spec:
       sources:
         - repoURL: https://kostis-codefresh.github.io/multi-sources-example
           chart: my-chart
-          targetRevision: "0.1.0"
+          targetRevision: "{{.chart}}"
           helm:
             valueFiles:
               - $values/helm-multi-source/my-values/common-values.yaml
@@ -30,7 +30,7 @@ spec:
               - $values/helm-multi-source/my-values/env-type/{{.type}}-values.yaml
               - $values/helm-multi-source/my-values/regions/{{.region}}-values.yaml
               - $values/helm-multi-source/my-values/envs/{{.env}}-values.yaml
-        - repoURL: "https://github.com/mattwilsn/gitops-cert-level-3-examples.git"
+        - repoURL: "https://github.com/codefresh-contrib/gitops-cert-level-3-examples.git"
           targetRevision: HEAD
           ref: values
 
