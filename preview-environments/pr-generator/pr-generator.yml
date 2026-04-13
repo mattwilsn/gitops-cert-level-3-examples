@@ -9,8 +9,10 @@ spec:
   generators:
     - pullRequest:
         github:
-          owner: mattwilsn
+          owner: codefresh-contrib
           repo: gitops-cert-level-3-examples
+          labels:
+            - preview
         requeueAfterSeconds: 180
   template:
     metadata:
